@@ -1,0 +1,62 @@
+<!!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Board Form</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <style>
+        /*html{position:relative;min-height:100%;}*/
+        body{
+            margin-bottom:60px;
+        }
+
+        body > .container{
+            padding:60px 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <table>
+        <thead>
+            게시글 작성
+        </thead>
+        <tbody>
+        <form >
+            <tr>
+                <td>
+                    제목
+                </td>
+            <td>
+                <input type="text" >
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    내용
+                </td>
+                <td>
+                    <input type="text" size="50" onclick="location.href='/board/list.html'">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button>작성</button>
+
+                </td>
+            </tr>
+        </form>
+
+        </tbody>
+    </table>
+
+
+</div>
+</body>
+</html>
+
+
