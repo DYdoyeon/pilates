@@ -9,18 +9,13 @@ import java.util.List;
 
 @Service
 public class BoardService {
+    BoardRepository boardRepository;
     @Autowired
-    private BoardRepository boardRepository;
-
-    public BoardService(BoardRepository boardRepository){
+    BoardService (BoardRepository boardRepository){
         this.boardRepository = boardRepository;
     }
 
-    public void save(){
-
-    }
-    public List<Post> getList(){
-        List<Post> list = boardRepository.findAll();
-        return list;
+    public List<Post> test(){
+        return boardRepository.findAll();
     }
 }

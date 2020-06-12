@@ -12,6 +12,6 @@ import java.util.List;
 
 @Repository
 public interface BoardRepository extends CrudRepository<Post, Long> {
-    List<Post> findAll();
-    List<Post> save();
+   List<Post>  findAll();
+
 }
