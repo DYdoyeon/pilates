@@ -1,14 +1,8 @@
 package com.doyeon.testBoard.pilates.error;
 
-import com.doyeon.testBoard.pilates.controller.boardController;
-import com.doyeon.testBoard.pilates.domain.result.ObjectResult;
-import com.doyeon.testBoard.pilates.domain.result.ResultPrint;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.servlet.error.ErrorController;
-import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.RequestDispatcher;

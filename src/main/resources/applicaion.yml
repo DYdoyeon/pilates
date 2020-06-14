@@ -1,9 +1,9 @@
 #spring:
- # datasource:
-  #  driver-class-name: com.mysql.cj.jdbc.Driver
-  #  url: jdbc:mysql://localhost:3306/pilates?userSSL=false&serverTimezone=Asia/Seoul
- #   username: doyeon
- #   password: password
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/pilates?userSSL=false&serverTimezone=Asia/Seoul
+#    username: doyeon
+#    password: password
 
 #jpa:
  #   database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
@@ -22,3 +22,23 @@
   #        descriptor:
             #sql:
               #BasicBinder: TRACE
+
+
+spring.datasource.url=jdbc:h2:~/test
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=none
+
+  # mybatis 매핑 type을 짧게 쓰기 위한 설정
+mybatis.type-aliases-package=com.doyeon.testBoard.pilates
+
+
+  # mapper 이하를 로깅 위치로 설정.
+  #logging.level.com.doyeon.testBoard.pilates.domain.repository=TRACE
+
+spring.main.allow-bean-definition-overriding=true
+
+
+mybatis.config-location=classpath:mappers/mybatis-config.xml

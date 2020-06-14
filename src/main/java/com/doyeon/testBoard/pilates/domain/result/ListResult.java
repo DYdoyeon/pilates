@@ -10,6 +10,9 @@ import java.util.List;
 
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class ListResult {
     public int code;
     public String msg;
