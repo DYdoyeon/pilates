@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.doyeon.testBoard.pilates.domain.repository.BoardRepository">
+
+    <select id="findAll" resultType="com.doyeon.testBoard.pilates.domain.entity.Post">
+        SELECT *
+        FROM POST
+    </select>
+
+    <select id="findById" resultType="com.doyeon.testBoard.pilates.domain.entity.Post" parameterType="Long">
+        SELECT *
+        FROM POST
+        WHERE POSTNO = ${value}
+
+    </select>
+
+    <insert id ="save"  parameterType="com.doyeon.testBoard.pilates.domain.entity.Post"  >
+        INSERT INTO POST
+        (TITLE,CATEGORY,CONTENT, WRITER)
+        VALUES
+        (#{title},#{category},#{content},#{writer})
+
+    </insert>
+    <update id ="update" parameterType="com.doyeon.testBoard.pilates.domain.entity.Post" >
+        UPDATE POST
+        SET
+        <if test=  "category!=null">
+
+            CATEGORY = #{category}
+        </if>
+        <if test=  "title!=null">
+
+         ,   TITLE = #{title}
+        </if>
+        <if test=  "content!=null">
+
+        ,CONTENT = #{content}
+        </if>
+        <if test=  "writer!=null">
+
+       , WRITER = #{writer}
+        </if>
+        WHERE POSTNO = #{postNo}
+    </update>
+    <delete id="delete" parameterType="Long">
+        DELETE POST
+        WHERE POSTNO = #{postNo}
+    </delete>
+</mapper>
